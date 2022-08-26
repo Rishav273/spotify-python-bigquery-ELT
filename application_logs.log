@@ -1,0 +1,15 @@
+2022-08-26 17:52:21,779 : extract_and_load_data.py : INFO: Starting pipeline for search name: Latin...
+2022-08-26 17:52:22,951 : extract_and_load_data.py : INFO: Fetched playlist ids for Latin.
+2022-08-26 17:52:22,954 : extract_and_load_data.py : INFO: Created EMPTY dataframe...
+2022-08-26 17:52:22,954 : extract_and_load_data.py : INFO: Collecting playlist data into dataframe...
+2022-08-26 17:53:09,433 : extract_and_load_data.py : INFO: Data collected: 3991 rows, 8 columns.
+2022-08-26 17:53:09,434 : extract_and_load_data.py : INFO: Writing data to bigquery...
+2022-08-26 17:53:12,885 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2022-08-26 17:53:15,887 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2022-08-26 17:53:18,891 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2022-08-26 17:53:18,891 : _default.py : WARNING: Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2022-08-26 17:53:26,503 : gbq.py : INFO: 3991 out of 3991 rows loaded.
+2022-08-26 17:53:26,503 : extract_and_load_data.py : INFO: Data appended to bigquery table.
+2022-08-26 17:53:26,503 : extract_and_load_data.py : INFO: Task Complete.
+
+
