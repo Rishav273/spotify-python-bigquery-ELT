@@ -184,7 +184,6 @@ if __name__ == '__main__':
 
     print(f'Data collected: {len(df)} rows, {len(df.columns)} columns.')
 
-    # save to disk
 
     # write to big query
     pandas_gbq.to_gbq(bq_loader_function(df),
