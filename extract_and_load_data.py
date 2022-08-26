@@ -5,6 +5,15 @@ import yaml
 import pandas as pd
 import pandas_gbq
 import io
+import logging
+
+# instantiate logger
+logger = logging.getLogger(__name__)
+
+# set logging configuration
+logging.basicConfig(filename='application_logs.log',
+                    level=logging.INFO,
+                    format='%(asctime)s : %(filename)s : %(levelname)s: %(message)s')
 
 # get credentials
 with open('config.yaml', 'r') as f:
@@ -163,9 +172,15 @@ def bq_loader_function(df):
     return new_df
 
 
+# search key for getting the relevant playlists
+SEARCH_NAME = 'Latin'
+
 if __name__ == '__main__':
+    logger.info(f"Starting pipeline for search name: {SEARCH_NAME}...")
+
     # get list of playlist ids
-    playlist_ids = get_playlist_ids(['spanish'], auth=auth_manager, lim=50)
+    playlist_ids = get_playlist_ids([SEARCH_NAME], auth=auth_manager, lim=50)
+    logger.info(msg=f"Fetched playlist ids for {SEARCH_NAME}.")
 
     # create empty dataframe
     df = pd.DataFrame(columns=['track_name',
@@ -177,16 +192,21 @@ if __name__ == '__main__':
                                'album_type',
                                'total_album_tracks'])
 
+    logger.info('Created EMPTY dataframe...')
+
     # extract data from playlist and add to dataframe
-    print('Collecting...')
+    logger.info('Collecting playlist data into dataframe...')
     for p_id in playlist_ids:
         df = pd.concat([df, create_data_from_playlist(playlist_id=p_id, auth=auth_manager)])
 
-    print(f'Data collected: {len(df)} rows, {len(df.columns)} columns.')
+    logger.info(f'Data collected: {len(df)} rows, {len(df.columns)} columns.')
 
-
+    logger.info('Writing data to bigquery...')
     # write to big query
     pandas_gbq.to_gbq(bq_loader_function(df),
                       destination_table=BQ_TABLE,
                       project_id=BQ_PROJECT,
                       if_exists='append')
+    logger.info(f'Data appended to bigquery table.')
+
+    logger.info('Task Complete.\n\n')
