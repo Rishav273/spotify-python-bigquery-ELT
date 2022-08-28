@@ -4,6 +4,7 @@
 The Extract and Loading tasks were done using "extract_and_load_data.py" file, using bigquery client library and pandas_gbq package. Data was extracted using python's spotipy API client and loaded to a partitioned bigquery table. Logging procedures have also been applied in order to monitor every step of the pipeline.
 
 All Transformation steps were done using SQL in BigQuery. The resultant data was stored in views and used to make dynamic dashboards via Google Data Studio.
+A configuration YAML file has been used to document and change parameters as necessary.
 
 Some screenshots have been attached below:
 
@@ -14,3 +15,9 @@ Some screenshots have been attached below:
 Future improvements:
 * Collecting more metadata on genres of the tracks. Currently the spotify API doesn't expose any endpoint relating to track genre.
 * Trying out big-data resilient tools like Apache Beam as an alternative to pandas dataframes, for ingesting higer volumes of data per batch.   
+
+Docs Referenced:
+* Spotipy Python docs - https://spotipy.readthedocs.io/en/master/
+* pandas_gbq - https://pandas-gbq.readthedocs.io/en/latest/
+* Google Bigquery docs - https://cloud.google.com/bigquery/docs/reference/libraries-overview
+* Data Studio - https://developers.google.com/datastudio
