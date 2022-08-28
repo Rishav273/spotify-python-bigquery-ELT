@@ -9,7 +9,7 @@ Some screenshots have been attached below:
 
 ![image](https://user-images.githubusercontent.com/65105994/187060283-cb13bf29-99e5-4fc9-8894-9106c9c589e2.png)
 
-![image](https://user-images.githubusercontent.com/65105994/187060314-0bee00d3-bb41-43a1-9a65-a69cc0e5cca6.png)
+![image](https://user-images.githubusercontent.com/65105994/187060629-2d215d6d-6e6b-40c0-aa79-304c0b06af8d.png)
 
 Future improvements:
 * Collecting more metadata on genres of the tracks. Currently the spotify API doesn't expose any endpoint relating to track genre.
