@@ -174,13 +174,14 @@ def bq_loader_function(df):
 
 
 # search key for getting the relevant playlists
-SEARCH_NAME = 'Dream'
+SEARCH_NAME = config['spotify_search_key']
 
 
 if __name__ == '__main__':
+    # start pipeline
     logger.info(f"Starting pipeline for search name: {SEARCH_NAME}...")
 
-    # get list of playlist ids
+    # get list of playlist ids using spotipy client
     playlist_ids = get_playlist_ids([SEARCH_NAME], auth=auth_manager, lim=1)
     logger.info(msg=f"Fetched playlist ids for {SEARCH_NAME}.")
 
