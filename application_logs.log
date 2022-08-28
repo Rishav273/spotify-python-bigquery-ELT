@@ -13,3 +13,18 @@
 2022-08-26 17:53:26,503 : extract_and_load_data.py : INFO: Task Complete.
 
 
+2022-08-27 15:01:21,869 : extract_and_load_data.py : INFO: Starting pipeline for search name: Dream...
+2022-08-27 15:01:23,839 : extract_and_load_data.py : INFO: Fetched playlist ids for Dream.
+2022-08-27 15:01:23,844 : extract_and_load_data.py : INFO: Created EMPTY dataframe...
+2022-08-27 15:01:23,844 : extract_and_load_data.py : INFO: Collecting playlist data into dataframe...
+2022-08-27 15:01:24,338 : extract_and_load_data.py : INFO: Data collected: 100 rows, 8 columns.
+2022-08-27 15:01:24,338 : extract_and_load_data.py : INFO: Writing data to bigquery...
+2022-08-27 15:01:27,407 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2022-08-27 15:01:30,409 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2022-08-27 15:01:33,421 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2022-08-27 15:01:33,421 : _default.py : WARNING: Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2022-08-27 15:01:42,927 : gbq.py : INFO: 100 out of 100 rows loaded.
+2022-08-27 15:01:42,927 : extract_and_load_data.py : INFO: Data appended to bigquery table.
+2022-08-27 15:01:42,928 : extract_and_load_data.py : INFO: Task Complete.
+
+
