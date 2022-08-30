@@ -182,7 +182,7 @@ if __name__ == '__main__':
     logger.info(f"Starting pipeline for search name: {SEARCH_NAME}...")
 
     # get list of playlist ids using spotipy client
-    playlist_ids = get_playlist_ids([SEARCH_NAME], auth=auth_manager, lim=1)
+    playlist_ids = get_playlist_ids([SEARCH_NAME], auth=auth_manager, lim=50)
     logger.info(msg=f"Fetched playlist ids for {SEARCH_NAME}.")
 
     # create empty dataframe

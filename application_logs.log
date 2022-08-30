@@ -28,3 +28,18 @@
 2022-08-27 15:01:42,928 : extract_and_load_data.py : INFO: Task Complete.
 
 
+2022-08-30 11:14:56,075 : extract_and_load_data.py : INFO: Starting pipeline for search name: Indian Metal...
+2022-08-30 11:14:56,796 : extract_and_load_data.py : INFO: Fetched playlist ids for Indian Metal.
+2022-08-30 11:14:56,817 : extract_and_load_data.py : INFO: Created EMPTY dataframe...
+2022-08-30 11:14:56,817 : extract_and_load_data.py : INFO: Collecting playlist data into dataframe...
+2022-08-30 11:14:57,192 : extract_and_load_data.py : INFO: Data collected: 78 rows, 8 columns.
+2022-08-30 11:14:57,192 : extract_and_load_data.py : INFO: Writing data to bigquery...
+2022-08-30 11:15:00,302 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2022-08-30 11:15:03,316 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2022-08-30 11:15:06,321 : _metadata.py : WARNING: Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2022-08-30 11:15:06,321 : _default.py : WARNING: Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2022-08-30 11:15:13,549 : gbq.py : INFO: 78 out of 78 rows loaded.
+2022-08-30 11:15:13,549 : extract_and_load_data.py : INFO: Data appended to bigquery table.
+2022-08-30 11:15:13,549 : extract_and_load_data.py : INFO: Task Complete.
+
+
